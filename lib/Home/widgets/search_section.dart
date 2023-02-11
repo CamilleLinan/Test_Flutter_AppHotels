@@ -1,4 +1,5 @@
 import 'package:apphotels/Home/home_page.dart';
+import 'package:apphotels/Pages/calendar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -76,25 +77,37 @@ class SearchSection extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 14, 10, 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Choose date',
-                      style: GoogleFonts.nunito(
-                        color: Colors.black.withOpacity(0.5),
-                        fontSize: 14,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const CalendarPage();
+                        },
                       ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '12 Dec - 22 Dec',
-                      style: GoogleFonts.nunito(
-                        color: Colors.black,
-                        fontSize: 16,
+                    );
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Choose date',
+                        style: GoogleFonts.nunito(
+                          color: Colors.black.withOpacity(0.5),
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 8),
+                      Text(
+                        '12 Dec - 22 Dec',
+                        style: GoogleFonts.nunito(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
