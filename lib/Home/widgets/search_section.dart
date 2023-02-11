@@ -1,5 +1,6 @@
 import 'package:apphotels/Home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({super.key});
@@ -7,7 +8,6 @@ class SearchSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
       color: Colors.grey[200],
       padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
       child: Column(
@@ -20,11 +20,11 @@ class SearchSection extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Colors.grey,
+                        color: Colors.grey.shade300,
                         blurRadius: 4,
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -41,16 +41,16 @@ class SearchSection extends StatelessWidget {
               Container(
                 height: 50,
                 width: 50,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: dBlue,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey,
+                      color: Colors.grey.shade400,
                       blurRadius: 4,
-                      offset: Offset(0, 4),
+                      offset: const Offset(0, 4),
                     ),
                   ],
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(25),
                   ),
                 ),
@@ -64,13 +64,70 @@ class SearchSection extends StatelessWidget {
                   child: const Icon(
                     Icons.search,
                     color: Colors.white,
-                    size: 25,
+                    size: 23,
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 50),
+          //const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                margin: const EdgeInsets.fromLTRB(10, 14, 10, 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Choose date',
+                      style: GoogleFonts.nunito(
+                        color: Colors.black.withOpacity(0.5),
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      '12 Dec - 22 Dec',
+                      style: GoogleFonts.nunito(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 20, 0, 5),
+                color: Colors.grey.withOpacity(0.5),
+                height: 30,
+                width: 1,
+              ),
+              Container(
+                margin: const EdgeInsets.fromLTRB(10, 14, 10, 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Number of Rooms',
+                      style: GoogleFonts.nunito(
+                        color: Colors.black.withOpacity(0.5),
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      '1 Room - 2 Adults',
+                      style: GoogleFonts.nunito(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
