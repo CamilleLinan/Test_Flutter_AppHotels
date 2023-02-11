@@ -1,5 +1,6 @@
 import 'package:apphotels/Pages/widgets/appbar_page.dart';
 import 'package:apphotels/Pages/widgets/calendar_range.dart';
+import 'package:apphotels/Pages/widgets/period_section.dart';
 import 'package:flutter/material.dart';
 
 class CalendarPage extends StatelessWidget {
@@ -8,13 +9,12 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBarPage(),
-      body: Container(
-        child: Column(
-          children: const [
-            CalendarRange(),
-          ],
-        ),
+      appBar: const MyAppBarPage(),
+      body: Column(
+        children: const [
+          PeriodSection(),
+          CalendarRange(),
+        ],
       ),
     );
   }
