@@ -38,6 +38,16 @@ class _CalendarRangeState extends State<CalendarRange> {
             titleCentered: true,
             formatButtonVisible: false,
             titleTextStyle: TextStyle(fontSize: 18),
+            leftChevronIcon: Icon(
+              Icons.chevron_left_rounded,
+              color: dBlue,
+              size: 30,
+            ),
+            rightChevronIcon: Icon(
+              Icons.chevron_right_rounded,
+              color: dBlue,
+              size: 30,
+            ),
           ),
           calendarStyle: const CalendarStyle(
             isTodayHighlighted: false,

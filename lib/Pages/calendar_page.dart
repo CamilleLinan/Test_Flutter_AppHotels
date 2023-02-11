@@ -1,6 +1,7 @@
 import 'package:apphotels/Pages/widgets/appbar_page.dart';
 import 'package:apphotels/Pages/widgets/calendar_range.dart';
 import 'package:apphotels/Pages/widgets/period_section.dart';
+import 'package:apphotels/Pages/widgets/validate_booking_section.dart';
 import 'package:flutter/material.dart';
 
 class CalendarPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class CalendarPage extends StatelessWidget {
         children: const [
           PeriodSection(),
           CalendarRange(),
+          ValidateBookingSection(),
         ],
       ),
     );

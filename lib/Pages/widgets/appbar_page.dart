@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyAppBarPage extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBarPage({super.key});
@@ -13,11 +14,18 @@ class MyAppBarPage extends StatelessWidget implements PreferredSizeWidget {
         icon: Icon(
           Icons.arrow_back,
           color: Colors.grey[800],
-          size: 20,
+          size: 22,
         ),
         onPressed: () {
           Navigator.pop(context);
         },
+      ),
+      title: Text(
+        'Choose your dates',
+        style: GoogleFonts.nunito(
+          color: Colors.black,
+          fontSize: 19,
+        ),
       ),
       backgroundColor: Colors.white,
     );
